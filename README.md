@@ -1,9 +1,9 @@
 # codeigniter4-websocket
 
-Corrigir erro de wss no nginx aapanel
-criar um proxy reverso apontando para o http://localhost:8282
+Corrigir erro de wss no nginx aapanel<br>
+- Criar um proxy reverso apontando para o http://localhost:8282
 nas config do proxy colocar isto:
-
+```php
 location ^~ /
 {
     proxy_pass http://localhost:8282;
@@ -12,3 +12,4 @@ location ^~ /
     proxy_set_header Connection "upgrade";
     proxy_read_timeout 3600s;
 }
+```
